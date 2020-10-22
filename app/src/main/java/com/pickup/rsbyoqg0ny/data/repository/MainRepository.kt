@@ -7,7 +7,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-
+//hi
 class MainRepository(val restInterface: RestInterface) {
     inline fun getPopulars(
         page: Int,
