@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RSbYOqg0ny</string>
+    <string name="text_first_air_date">First air  date:</string>
+    <string name="text_popularity">Popularity:</string>
+    <string name="text_language">Language:</string>
+    <string name="url_image_baseurl">http://image.tmdb.org/t/p/w500</string>
+</resources>
