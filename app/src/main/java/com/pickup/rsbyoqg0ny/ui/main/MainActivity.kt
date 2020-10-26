@@ -114,8 +114,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        val width = (resources.displayMetrics.widthPixels * 0.80).toInt()
-        val height = (resources.displayMetrics.heightPixels * 0.80).toInt()
+        val width = (resources.displayMetrics.widthPixels * 0.95).toInt()
+        val height = (resources.displayMetrics.heightPixels * 0.90).toInt()
         customDialog?.show()
         customDialog?.window?.setLayout(width, height)
     }
