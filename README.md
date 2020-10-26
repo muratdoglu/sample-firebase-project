@@ -8,7 +8,7 @@ Movies are listed using Themoviedb.org api.
 -LiveData <br>
 -Databinding <br>
 -Koin <br>
--ConstraitLayout <br>
+-ConstraitLayout <strong> (updated) </strong> <br>
 -Retrofit <br>
 -Picasso <br>
 
