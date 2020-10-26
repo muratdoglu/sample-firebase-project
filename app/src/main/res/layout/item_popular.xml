@@ -11,7 +11,7 @@
 
     </data>
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="4dp"
@@ -23,34 +23,41 @@
             android:id="@+id/iv_poster"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginBottom="3dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/img_placeholder" />
+
 
         <TextView
             android:id="@+id/tv_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginTop="25dp"
             android:layout_weight="1"
             android:maxLength="40"
             android:text="@{Double.toString(movie.vote_average)}"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
-            android:textSize="15dp" />
-
+            android:textSize="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="17dp"
             android:background="@color/white_alpha"
-            android:padding="10dp">
+            android:padding="10dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_poster"
+            app:layout_constraintBottom_toBottomOf="@id/iv_poster"
+           >
 
             <TextView
                 android:id="@+id/tv_name"
@@ -72,6 +79,6 @@
         </LinearLayout>
 
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

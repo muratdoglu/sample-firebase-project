@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
     </data>
 
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/popup_background"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/iv_poster"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:adjustViewBounds="true"
-                android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/iv_close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:padding="10dp"
-                android:src="@drawable/ic_close" />
-        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_close"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
@@ -38,28 +41,27 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="7dp"
 
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:text="asfaf as  jaksf jsa "
             android:textAlignment="center"
-            android:textSize="20dp" />
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_poster" />
 
         <TextView
             android:id="@+id/tv_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="7dp"
 
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginTop="20dp"
             android:text="asfaf as  jaksf jsa "
             android:textAlignment="center"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
 
         <TextView
@@ -67,14 +69,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="7dp"
 
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginTop="20dp"
             android:text="asfaf as  jaksf jsa "
             android:textAlignment="center"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_country"
+            app:layout_constraintTop_toBottomOf="@+id/tv_country" />
 
 
         <TextView
@@ -82,29 +83,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="7dp"
 
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginTop="20dp"
             android:text="asfaf as  jaksf jsa "
             android:textAlignment="center"
-            android:textSize="14dp" />
+            android:textSize="14dp"
+            app:layout_constraintStart_toStartOf="@+id/tv_popularity"
+            app:layout_constraintTop_toBottomOf="@+id/tv_popularity" />
 
         <TextView
             android:id="@+id/tv_desc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="7dp"
 
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="7dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:text="asfaf as  jaksf jsa "
             android:textAlignment="center"
-            android:textSize="12dp" />
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -50,11 +50,11 @@ class MainActivity : AppCompatActivity() {
         popularsAdapter = PopularsAdapter(viewModel.popularMovies.value!!,
             object : PopularsAdapter.OnItemClickListener {
                 override fun onItemClick(movie: Movie) {
-                    showCustomDialog(movie)
+                    showDetailPopup(movie)
                 }
 
             })
-        layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
+        layoutManager = LinearLayoutManager(this)
         binding?.rvPopulars?.layoutManager = layoutManager
         binding?.rvPopulars?.adapter = popularsAdapter
         binding?.rvPopulars?.addOnScrollListener(createInfiniteScrollListener())
@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("SetTextI18n")
-    fun showCustomDialog(movie: Movie) {
+    fun showDetailPopup(movie: Movie) {
         var customDialog = Dialog(this)
         customDialog?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         customDialog?.setCancelable(true)
@@ -115,7 +115,8 @@ class MainActivity : AppCompatActivity() {
 
 
         val width = (resources.displayMetrics.widthPixels * 0.80).toInt()
+        val height = (resources.displayMetrics.heightPixels * 0.80).toInt()
         customDialog?.show()
-        customDialog?.window?.setLayout(width, WindowManager.LayoutParams.WRAP_CONTENT)
+        customDialog?.window?.setLayout(width, height)
     }
 }
