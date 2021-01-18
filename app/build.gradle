@@ -41,8 +41,6 @@ dependencies {
     //Navigation
     implementation 'android.arch.navigation:navigation-fragment:1.0.0'
     implementation 'android.arch.navigation:navigation-ui:1.0.0'
-    //Picasso
-    implementation 'com.squareup.picasso:picasso:2.5.2'
     //ConstraitLayout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
