@@ -19,12 +19,16 @@ class MainViewModel(val pref: SharedPreferences) : ViewModel() {
     fun getPeoplePart() {
         dataSource.fetch(next) { fetchResponse: FetchResponse?, fetchError: FetchError? ->
             if (fetchError == null) {
-                next = fetchResponse?.next
+                if(next==null){
+                    people.value= arrayListOf()
+                }
+
                 var cachePeople = fetchResponse?.people?.toMutableList()
                 if (cachePeople?.size ?: 0 > 0) {
                     var oldPeople: MutableList<Person>? = people.value?.toMutableList()
                     cachePeople?.let { oldPeople?.addAll(it) }
                     people.postValue(oldPeople?.distinct()?.toMutableList())
+                    next = fetchResponse?.next
                 } else {
                     getPeoplePart()
                 }

@@ -13,6 +13,7 @@ import com.tetomanta.mestonki.R
 import com.tetomanta.mestonki.databinding.ActivityMainBinding
 import org.koin.android.ext.android.inject
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,6 +34,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun load() {
         viewModel.people.value = arrayListOf()
+
+        binding?.srLayout?.setOnRefreshListener {
+            viewModel.next=null
+            viewModel.getPeoplePart()
+        }
 
     }
 
@@ -56,11 +62,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun observe() {
         viewModel.people.observe(this, Observer {
-
+            if(it.size>0){
+                binding?.srLayout?.isRefreshing = false
+                binding?.clBar?.visibility = GONE
+            }
             if (it.size > 0 && usersAdapter == null) {
                 createAdapter()
-            } else {
-                binding?.clBar?.visibility = GONE
             }
             usersAdapter?.updatePeople(viewModel.people.value!!)
             usersAdapter?.notifyDataSetChanged()
