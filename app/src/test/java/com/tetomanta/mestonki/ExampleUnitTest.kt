@@ -1,4 +1,4 @@
-package com.pickup.rsbyoqg0ny
+package com.tetomanta.mestonki
 
 import org.junit.Test
 

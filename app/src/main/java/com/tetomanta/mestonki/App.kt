@@ -1,8 +1,8 @@
-package com.pickup.rsbyoqg0ny
+package com.tetomanta.mestonki
 
 import android.app.Application
-import com.pickup.rsbyoqg0ny.module.mainModule
-import com.pickup.rsbyoqg0ny.module.networkModule
+import com.tetomanta.mestonki.module.mainModule
+
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -15,7 +15,7 @@ class App : Application() {
         startKoin {
             androidLogger()
             androidContext(this@App)
-            modules(listOf(networkModule, mainModule))
+            modules(listOf( mainModule))
         }
     }
 }
