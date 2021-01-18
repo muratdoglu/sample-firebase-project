@@ -46,8 +46,6 @@ dependencies {
     //ConstraitLayout
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
-    //Infinitescroll
-    implementation 'com.github.danish-p:PaginationApp:0.1.0'
     //Databinding
     kapt "com.android.databinding:compiler:3.1.4"
 }
