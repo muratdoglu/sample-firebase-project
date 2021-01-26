@@ -1,7 +1,7 @@
 # firebase-sample
 
--Firebase
--Cloud Firestore
+-Firebase<br>
+-Cloud Firestore<br>
 -Kotlin <br>
 -Mvvm <br>
 -LiveData <br>
