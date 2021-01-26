@@ -1,4 +1,4 @@
-package com.tetomanta.mestonki
+package com.mrt.firebasesample
 
 import org.junit.Test
 

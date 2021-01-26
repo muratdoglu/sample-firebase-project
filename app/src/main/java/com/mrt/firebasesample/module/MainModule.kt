@@ -1,8 +1,8 @@
-package com.tetomanta.mestonki.module
+package com.mrt.firebasesample.module
 
 import android.app.Application
 import android.content.SharedPreferences
-import com.tetomanta.mestonki.ui.main.MainViewModel
+import com.mrt.firebasesample.ui.main.MainViewModel
 import org.koin.android.ext.koin.androidApplication
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
